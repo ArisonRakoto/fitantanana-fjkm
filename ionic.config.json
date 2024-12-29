@@ -1,0 +1,7 @@
+{
+  "name": "fitantanana-fjkm",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

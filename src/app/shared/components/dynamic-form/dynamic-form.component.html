@@ -1,0 +1,46 @@
+<form [formGroup]="dynamicFormGroup" class="g-4 border p-4 m-4 rounded-md">
+  <!-- Loop through form controls -->
+  @for (control of form.formControls; track $index) {
+  <ng-container>
+    @if (['text', 'email', 'password', 'number', 'date'].includes(control.type))
+    {
+    <div [class]="control?.class">
+      <label
+        for="{{ control.name }}"
+        class="text-sm flex flex-col font-semibold text-slate-500 capitalize"
+        >{{ control.label }}</label
+      >
+      <input
+        formControlName="{{ control?.name }}"
+        [type]="control?.type"
+        class="border rounded-sm py-2 px-2 text-sm mb-2 w-full"
+      />
+      @if (dynamicFormGroup.get(control.name)?.invalid) {<small
+        class="text-danger"
+      >
+        {{ getErrorMessage(control) }} </small
+      >}
+    </div>
+    }
+
+    <!-- Implement rendering for other control types: select and radio -->
+  </ng-container>
+  }
+
+  <div class="justify-end w-full mt-4">
+    <button
+      (click)="onSubmit()"
+      type="button"
+      class="bg-blue-500 rounded-md mx-2 p-2 text-white"
+    >
+      {{ form.saveBtnTitle }}
+    </button>
+    <button
+      (click)="resetForm()"
+      type="button"
+      class="bg-red-500 rounded-md mx-2 p-2 text-white"
+    >
+      {{ form.cancelBtnTitle }}
+    </button>
+  </div>
+</form>

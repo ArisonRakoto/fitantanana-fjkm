@@ -1,0 +1,10 @@
+.split-pane-visible > ion-menu {
+  max-width: 15% !important;
+  min-width: 15%;
+}
+
+ion-content {
+  --padding-start: 5px;
+  --padding-bottom: 20px;
+  --ion-background-color: #f8fafc;
+}

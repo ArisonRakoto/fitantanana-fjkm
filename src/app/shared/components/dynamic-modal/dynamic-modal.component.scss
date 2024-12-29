@@ -1,0 +1,29 @@
+.toolbar-component {
+  
+    padding-inline-start: var(--padding-start);
+  padding-inline-end: var(--padding-end);
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  min-height: 30px !important;
+  max-height: 30px !important;
+
+  ion-buttons {
+    ion-icon {
+      font-size: 18px;
+      margin-left: 15px;
+      color: #fff;
+    }
+  }
+
+  ion-title {
+    color: #fff;
+    font-weight: 400;
+  }
+}

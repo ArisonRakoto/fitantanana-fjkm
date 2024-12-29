@@ -1,0 +1,47 @@
+<app-header [icon]="'people-outline'" [title]="'Lisitry ny Mpiangona'" />
+
+<ion-content>
+  <button
+    (click)="openModal()"
+    class="m-4 py-2 px-4 rounded-md bg-slate-200 text-xs font-semibold float-right"
+  >
+    Ajouter
+  </button>
+  <app-dynamic-table [columns]="profileColumns" [data]="profiles" />
+  <app-pagination />
+
+  <app-dynamic-modal
+    [title]="'Ajouter'"
+    [showModal]="showModal"
+    [type]="'delete'"
+  >
+    <h1 class="text-blue-500 font-semibold mb-4">Profile</h1>
+
+    <form action="">
+      <label for="">Test</label>
+      <input class="form-control" type="text" placeholder="Test" />
+    </form>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptatem
+    temporibus earum laboriosam placeat amet quae est. Modi illum quae ipsa,
+    sint accusamus suscipit totam quaerat, tenetur maiores sit praesentium!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptatem
+    temporibus earum laboriosam placeat amet quae est. Modi illum quae ipsa,
+    sint accusamus suscipit totam quaerat, tenetur maiores sit praesentium!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptatem
+    temporibus earum laboriosam placeat amet quae est. Modi illum quae ipsa,
+    sint accusamus suscipit totam quaerat, tenetur maiores sit praesentium!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptatem
+    temporibus earum laboriosam placeat amet quae est. Modi illum quae ipsa,
+    sint accusamus suscipit totam quaerat, tenetur maiores sit praesentium! sint
+    accusamus suscipit totam quaerat, tenetur maiores sit praesentium! Lorem
+    ipsum dolor sit amet consectetur adipisicing elit. Facere voluptatem
+    temporibus earum laboriosam placeat amet quae est. Modi illum quae ipsa,
+    sint accusamus suscipit totam quaerat, tenetur maiores sit praesentium!
+  </app-dynamic-modal>
+
+  <!-- <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="openModal()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> -->
+</ion-content>

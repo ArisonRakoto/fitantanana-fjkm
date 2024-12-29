@@ -1,0 +1,24 @@
+<table class="w-full m-4">
+  <thead>
+    @for (col of columns; track $index) {
+    <th
+      class="text-left text-gray-500 text-sm p-4 py-3 border-b border-gray-200 bg-gray-100"
+    >
+      <div class="{{ col.class }}">{{ col.header }}</div>
+    </th>
+    }
+  </thead>
+  <tbody>
+    @for (item of data; track $index){
+    <tr
+      class="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-blue-200 cursor-pointer"
+    >
+      @for (col of columns; track $index) {
+      <td class="{{ col.class }}">
+        {{ item[col.header] }}
+      </td>
+      }
+    </tr>
+    }
+  </tbody>
+</table>
